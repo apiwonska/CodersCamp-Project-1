@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Bai+Jamjuree:400,600,700|Open+Sans:400,700&display=swap");
 :root {
   --main-color: #c471ed;
   --secondary-color: #12c2e9;
@@ -31,6 +31,8 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   font-family: var(--default-font);
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 h1::after {
@@ -65,6 +67,7 @@ h5 {
 .container {
   max-width: 1024px;
   margin: 0 auto;
+  background-color: white;
 }
 
 .navbar {
@@ -86,6 +89,8 @@ h5 {
   padding: 10px 0;
   line-height: 30px;
   font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .navbar__list {
@@ -112,7 +117,6 @@ h5 {
 .navbar__link {
   color: lightgray;
   text-decoration: none;
-  font-weight: bold;
   padding: 5px 0;
 }
 
@@ -156,7 +160,8 @@ h5 {
 .header__title {
   font-family: var(--special-font);
   text-transform: uppercase;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
+  font-weight: bold;
   letter-spacing: 3px;
 }
 
@@ -220,6 +225,8 @@ h1::after {
 
 .skills {
   background-color: rgba(196, 113, 237, 0.5);
+  -webkit-box-shadow: 0 0 7px 2px lightgray;
+          box-shadow: 0 0 7px 2px lightgray;
 }
 
 .skills h1::after {
@@ -265,10 +272,10 @@ h1::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 125px;
-  height: 150px;
+  width: 110px;
+  height: 130px;
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 15px;
+  border-radius: 11px;
   -webkit-box-shadow: 0 0 0 5px rgba(196, 113, 237, 0.5), 0 0 0 10px rgba(255, 255, 255, 0.5);
           box-shadow: 0 0 0 5px rgba(196, 113, 237, 0.5), 0 0 0 10px rgba(255, 255, 255, 0.5);
   margin: 20px;
@@ -276,10 +283,7 @@ h1::after {
 
 .skills__item-text {
   margin-top: 15px;
-}
-
-.portfolio {
-  background-color: white;
+  font-family: var(--special-font);
 }
 
 .portfolio__container {
@@ -357,20 +361,21 @@ h1::after {
 .contact {
   position: relative;
   background-color: #9FE2F0FF;
-  z-index: 0;
+  -webkit-box-shadow: 0 0 5px 1px lightgray;
+          box-shadow: 0 0 5px 1px lightgray;
 }
 
 .contact h1::after {
   background-color: #12c2e9;
 }
 
-.contact__side-area {
-  display: none;
+.contact__form {
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
+  margin: 0 auto;
 }
 
 .form {
-  -ms-flex-preferred-size: 90%;
-      flex-basis: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -387,6 +392,8 @@ h1::after {
 .form__input[name] {
   margin: 7px;
   padding: 5px;
+  border: 1px lightgray solid;
+  border-radius: 7px;
   -webkit-box-shadow: 0 0 5px 0 lightgray;
           box-shadow: 0 0 5px 0 lightgray;
   font-family: var(--default-font);
@@ -404,14 +411,14 @@ h1::after {
   letter-spacing: 1.3px;
   font-family: var(--default-font);
   font-size: 1.1rem;
-  height: 80px;
-  width: 230px;
+  height: 70px;
+  width: 220px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-weight: bold;
   background-image: -webkit-gradient(linear, right top, left top, from(#C471ED), to(#12c2e9));
   background-image: linear-gradient(to left, #C471ED, #12c2e9);
-  border-radius: 30px;
+  border-radius: 25px;
   border: 0;
   cursor: pointer;
   z-index: 1;
@@ -420,13 +427,13 @@ h1::after {
 .form__btn::before {
   position: absolute;
   display: block;
-  top: 15px;
-  left: 15px;
+  top: 10px;
+  left: 10px;
   width: 200px;
   height: 50px;
   border-radius: 15px;
-  -webkit-box-shadow: 0 0 0 7px #9FE2F0FF;
-          box-shadow: 0 0 0 7px #9FE2F0FF;
+  -webkit-box-shadow: 0 0 0 5px #9FE2F0FF;
+          box-shadow: 0 0 0 5px #9FE2F0FF;
   content: "";
   z-index: 2;
 }
@@ -526,44 +533,8 @@ h1::after {
   .project__description {
     height: 32vw;
   }
-  .contact__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  .contact__side-area {
-    display: none;
-    -ms-flex-preferred-size: 35%;
-        flex-basis: 35%;
-    font-size: 18px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .contact__text {
-    width: 90%;
-    text-align: center;
-  }
-  .contact__icon {
-    margin-bottom: 30px;
-    color: white;
-  }
   .contact__form {
-    -ms-flex-preferred-size: 60%;
-        flex-basis: 60%;
+    width: 80%;
   }
 }
 
@@ -583,6 +554,9 @@ h1::after {
   }
   .project__description {
     height: 328px;
+  }
+  .contact__form {
+    width: 70%;
   }
 }
 /*# sourceMappingURL=style.css.map */
